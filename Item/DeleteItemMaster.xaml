@@ -1,0 +1,15 @@
+﻿<Window x:Class="Item.DeleteItemMaster"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DeleteItemMaster" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="18" HorizontalAlignment="Left" Margin="73,64,0,0" Name="txtBox_DeleteDesc" TabIndex="1" VerticalAlignment="Top" Width="181" IsReadOnly="True" />
+        <Label Content="Desc:" Height="24" HorizontalAlignment="Left" Margin="30,58,0,0" Name="label9" VerticalAlignment="Top" Width="46" />
+        <Label Content="Delete Item" FontWeight="Bold" Height="24" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label10" VerticalAlignment="Top" Width="90" />
+        <TextBox Height="18" HorizontalAlignment="Left" Margin="73,40,0,0" Name="txtBox_DeleteCode" TabIndex="0" VerticalAlignment="Top" Width="181" />
+        <Label Content="Code:" Height="24" HorizontalAlignment="Left" Margin="28,34,0,0" Name="label11" VerticalAlignment="Top" Width="46" />
+        <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="179,117,0,0" Name="btn_Delete" TabIndex="9" VerticalAlignment="Top" Width="75" Click="btn_Delete_Click" />
+        <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="98,88,0,0" Name="btn_DeleteClear" TabIndex="10" VerticalAlignment="Top" Width="75" Click="btn_DeleteClear_Click" />
+        <Button Content="Search" Height="23" HorizontalAlignment="Left" Margin="179,88,0,0" Name="btn_DeleteSearch" TabIndex="9" VerticalAlignment="Top" Width="75" Click="btn_DeleteSearch_Click" />
+    </Grid>
+</Window>

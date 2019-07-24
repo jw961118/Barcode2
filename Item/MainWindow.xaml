@@ -1,0 +1,13 @@
+﻿<Window x:Class="Item.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Main" DataContext="{Binding}" WindowStartupLocation="CenterScreen" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="350" Width="499" >
+    <Grid Width="477">
+        <Button Content="Add Item Master" Height="52" HorizontalAlignment="Left" Margin="12,44,0,215" Name="btn_AddItemMaster" VerticalAlignment="Center" Width="146" Click="btn_ItemMaster_Click" />
+        <Button Content="Add Item" Height="52" HorizontalAlignment="Left" Margin="83,102,0,157" Name="btn_AddItem" VerticalAlignment="Center" Width="146" Click="btn_AddItem_Click" />
+        <Button Content="Scan Item" Height="52" HorizontalAlignment="Left" Margin="164,160,0,99" Name="btn_ScanItem" VerticalAlignment="Center" Width="146" Click="btn_ScanItem_Click" />
+        <Button Content="Delete Item Master" Height="52" HorizontalAlignment="Left" Margin="316,44,0,215" Name="btn_DeleteItemMaster" VerticalAlignment="Center" Width="146" Click="btn_DeleteItemMaster_Click" />
+        <Button Content="Edit Item Master" Height="52" HorizontalAlignment="Left" Margin="164,44,0,215" Name="btn_EditItemMaster" VerticalAlignment="Center" Width="146" Click="btn_EditItemMaster_Click" />
+        <Button Content="Reprint Barcode" Height="52" HorizontalAlignment="Left" Margin="235,102,0,157" Name="btn_Reprint" VerticalAlignment="Center" Width="146" Click="btn_Reprint_Click" />
+    </Grid>
+</Window>
