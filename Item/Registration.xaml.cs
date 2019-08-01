@@ -40,6 +40,8 @@ namespace Item
         
         public void Reset()
         {
+            txtBox_FirstName.Clear();
+            txtBox_LastName.Clear();
             textBoxEmail.Text = "";
             passwordBox1.Password = "";
             passwordBoxConfirm.Password = "";
@@ -52,7 +54,19 @@ namespace Item
         
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxEmail.Text.Length == 0)
+            if (txtBox_FirstName.Text.Length == 0)
+            {
+                errormessage.Text = "Enter your first name.";
+                textBoxEmail.Focus();
+            }
+
+            else if (txtBox_LastName.Text.Length == 0)
+            {
+                errormessage.Text = "Enter your last name.";
+                textBoxEmail.Focus();
+            }
+
+            else if (textBoxEmail.Text.Length == 0)
             {
                 errormessage.Text = "Enter an email.";
                 textBoxEmail.Focus();
@@ -88,8 +102,14 @@ namespace Item
                     
                     SqlConnection con = new SqlConnection("Data Source=DESKTOP-Q1K44I8\\SA;Initial Catalog=Item2;Persist Security Info=True;User ID=sa;Password=softmap");
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Registration (Email,Password) values(" + "'" + email + "'" + ',' + "'" + password + "'" + ")", con);
-                    cmd.CommandType = CommandType.Text;
+                    SqlCommand cmd = new SqlCommand("dbo.uspAddUser", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("pFirstName", txtBox_FirstName.Text);
+                    cmd.Parameters.AddWithValue("pLastName", txtBox_LastName.Text);
+                    cmd.Parameters.AddWithValue("pLogin", email);
+                    cmd.Parameters.AddWithValue("pPassword", password);
+
                     cmd.ExecuteNonQuery();
                     con.Close();
                     errormessage.Text = "You have Registered successfully.";

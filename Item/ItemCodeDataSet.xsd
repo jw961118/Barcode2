@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ItemCodeDataSet" targetNamespace="http://tempuri.org/ItemCodeDataSet.xsd" xmlns:mstns="http://tempuri.org/ItemCodeDataSet.xsd" xmlns="http://tempuri.org/ItemCodeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ItemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ItemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Item.Properties.Settings.GlobalReference.Default.ItemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_ItemMasterTableAdapter" GeneratorDataComponentClassName="tbl_ItemMasterTableAdapter" Name="tbl_ItemMaster" UserDataComponentName="tbl_ItemMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ItemConnectionString (Settings)" DbObjectName="Item.dbo.tbl_ItemMaster" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[tbl_ItemMaster] DEFAULT VALUES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ItemCode FROM dbo.tbl_ItemMaster</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ItemCodeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ItemCodeDataSet" msprop:Generator_UserDSName="ItemCodeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_ItemMaster" msprop:Generator_TableClassName="tbl_ItemMasterDataTable" msprop:Generator_TableVarName="tabletbl_ItemMaster" msprop:Generator_TablePropName="tbl_ItemMaster" msprop:Generator_RowDeletingName="tbl_ItemMasterRowDeleting" msprop:Generator_RowChangingName="tbl_ItemMasterRowChanging" msprop:Generator_RowEvHandlerName="tbl_ItemMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ItemMasterRowDeleted" msprop:Generator_UserTableName="tbl_ItemMaster" msprop:Generator_RowChangedName="tbl_ItemMasterRowChanged" msprop:Generator_RowEvArgName="tbl_ItemMasterRowChangeEvent" msprop:Generator_RowClassName="tbl_ItemMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

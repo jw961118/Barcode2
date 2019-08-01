@@ -88,6 +88,8 @@ namespace Item
                 {
                     using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-Q1K44I8\\SA;Initial Catalog=Item2;Integrated Security=True"))
                     {
+                        string creator = TrackName.name;
+
                         if (radioBtn_Active.IsChecked == true)
                         {
                             using (SqlCommand Itemcmd = new SqlCommand("dbo.InsertItem", conn))
@@ -102,6 +104,7 @@ namespace Item
                                 Itemcmd.Parameters.AddWithValue("@Volume_UOM", txtBox_Volume.Text);
                                 Itemcmd.Parameters.AddWithValue("@Default_Loc", txtBox_Location.Text);
                                 Itemcmd.Parameters.AddWithValue("@Created_Dt", DateTime.Now.ToString());
+                                Itemcmd.Parameters.AddWithValue("@Created_By", creator);
 
                                 try
                                 {
@@ -135,6 +138,7 @@ namespace Item
                                 Itemcmd.Parameters.AddWithValue("@Volume_UOM", txtBox_Volume.Text);
                                 Itemcmd.Parameters.AddWithValue("@Default_Loc", txtBox_Location.Text);
                                 Itemcmd.Parameters.AddWithValue("@Created_Dt", DateTime.Now.ToString());
+                                Itemcmd.Parameters.AddWithValue("@Created_By", creator);
 
                                 try
                                 {

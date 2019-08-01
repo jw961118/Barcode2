@@ -100,6 +100,12 @@ namespace Item
             txtBox_Location.Clear();
         }
 
+        private void btn_Reprint_Click(object sender, RoutedEventArgs e)
+        {
+            var ReprintBarcode = new ReprintBarcode();
+            ReprintBarcode.Show();
+        }
+
 
     }
 }

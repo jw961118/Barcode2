@@ -45,6 +45,10 @@
             <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="55,204,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" Grid.Column="1" />
             <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="131,204,0,0" Name="button2" VerticalAlignment="Top" Width="70" Click="button2_Click" Grid.Column="1" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,204,60,0" Name="button3" VerticalAlignment="Top" Width="70" Click="button3_Click" Grid.Column="1" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,26,0,0" Name="textBlock1" Text="First Name:" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="55,26,0,0" Name="txtBox_FirstName" VerticalAlignment="Top" Width="222" Grid.Column="1" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,53,0,0" Name="textBlock2" Text="Last Name:" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="55,53,0,0" Name="txtBox_LastName" VerticalAlignment="Top" Width="222" Grid.Column="1" />
         </Grid>
     </Grid>
 </Window>

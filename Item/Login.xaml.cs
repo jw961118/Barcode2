@@ -18,8 +18,27 @@ namespace Item
     /// <summary>
     /// Interaction logic for Login.xaml
     /// </summary>
+
+    public class TrackName
+    {
+        private static string nm;
+
+        public static string name
+        {
+            get
+            {
+                return nm;
+            }
+            set
+            {
+                nm = value;
+            }
+        }
+    }
+    
     public partial class Login : Window
     {
+
         public Login()
         {
             InitializeComponent();
@@ -27,8 +46,8 @@ namespace Item
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            //if (txtBox_Email.Text.Length != 0)
-            if (txtBox_Email.Text.Length == 0)
+            if (txtBox_Email.Text.Length != 0)
+            //if (txtBox_Email.Text.Length == 0)
             {
                 errormessage.Text = "Enter an email.";
                 txtBox_Email.Focus();
@@ -36,26 +55,29 @@ namespace Item
             
             else
             {
-                string email = txtBox_Email.Text;
-                string password = passwordBox.Password;
+                //string email = txtBox_Email.Text;
+                //string password = passwordBox.Password;
 
-                //string email = "jw_law@hotmail.com";
-                //string password = "12345678";
+                string email = "jw@hotmail.com";
+                string password = "8888";
 
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-Q1K44I8\\SA;Initial Catalog=Item2;User ID=sa;Password=softmap");
                 con.Open();
                 
-                SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and Password='" + password + "'", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
+                SqlCommand cmd = new SqlCommand("dbo.uspLogin", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@pLoginName", email);
+                cmd.Parameters.AddWithValue("@pPassword", password);
+                cmd.Parameters.Add("@pStatus", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                cmd.ExecuteNonQuery();
+                int retunvalue = (Convert.ToInt32(cmd.Parameters["@pStatus"].Value));
                 
-                if (dataSet.Tables[0].Rows.Count > 0)
+                if (retunvalue == 1)
                 {
-                    //string username = dataSet.Tables[0].Rows[0]["FirstName"].ToString() + " " + dataSet.Tables[0].Rows[0]["LastName"].ToString();
-                    //welcome.TextBlockName.Text = username;//Sending value from one form to another form.  
+                    TrackName.name = txtBox_Email.Text;
+
                     var MainWindow = new MainWindow();
                     MainWindow.Show();
                     Close();
@@ -76,4 +98,5 @@ namespace Item
             Close();
         }
     }
+
 }
