@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Item.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-        Title="Login" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="350" Width="525" WindowStartupLocation="CenterScreen" Icon="D:\Task 4\Item2\img\lock.ico">
     <Grid>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="LoginHeading" Text="Login:" VerticalAlignment="Top" FontSize="17" FontStretch="ExtraCondensed"/>
         <TextBlock Height="50" HorizontalAlignment="Left" Margin="24,48,0,0" Name="textBlockHeading" VerticalAlignment="Top" FontSize="12" FontStyle="Italic" Padding="5">  
@@ -14,7 +14,7 @@
             <!--end textblock as a hyperlink-->  
             button  
         </TextBlock>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,120,0,0" Name="textBlock1" Text="Email" VerticalAlignment="Top" Width="67" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="79,119,0,0" Name="textBlock1" Text="Email" VerticalAlignment="Top" Width="67" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="58,168,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="77" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="118,115,0,0" Name="txtBox_Email" VerticalAlignment="Top" Width="247" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="118,168,0,0" Name="passwordBox" VerticalAlignment="Top" Width="247" />

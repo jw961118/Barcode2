@@ -129,11 +129,13 @@ namespace Item
                             txtBox_EditVolume.Text = (read["Volume_UOM"].ToString());
                             txtBox_EditLocation.Text = (read["Default_Loc"].ToString());
                         }
+                        btn_EditItem.IsEnabled = true;
                     }
 
                     catch
                     {
                         System.Windows.MessageBox.Show("Search Failed. Item not exist.");
+                        btn_EditItem.IsEnabled = false;
                     }
                     finally
                     {
@@ -156,7 +158,8 @@ namespace Item
             {
                 radioBtn_EditActive.IsChecked = false;
                 radioBtn_EditInactive.IsChecked = false;
-            }  
+            }
+            btn_EditItem.IsEnabled = false;
         }
 
         private void btn_EditSave_Click(object sender, RoutedEventArgs e)
@@ -216,7 +219,9 @@ namespace Item
                             {
                                 conn.Open();
                                 Itemcmd.ExecuteNonQuery();
+                                
                                 System.Windows.Forms.MessageBox.Show("Done");
+                                
                             }
 
                             catch
@@ -249,6 +254,8 @@ namespace Item
                         comboBox_EditType.IsHitTestVisible = false;
                         radioBtn_EditActive.IsEnabled = false;
                         radioBtn_EditInactive.IsEnabled = false;
+                        btn_EditItem.IsEnabled = true;
+                        btn_EditSave.IsEnabled = false;
                     }
 
                     catch
@@ -272,7 +279,7 @@ namespace Item
         private void btn_EditItem_Click(object sender, RoutedEventArgs e)
         {
             if (txtBox_EditCode.Text != "")
-            {
+            {    
                 if (System.Windows.MessageBox.Show("Do you want to edit this item?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     txtBox_EditDesc.IsReadOnly = false;
@@ -282,6 +289,8 @@ namespace Item
                     comboBox_EditType.IsHitTestVisible = true;
                     radioBtn_EditActive.IsEnabled = true;
                     radioBtn_EditInactive.IsEnabled = true;
+                    btn_EditItem.IsEnabled = false;
+                    btn_EditSave.IsEnabled = true;
                 }
                 else
                 {

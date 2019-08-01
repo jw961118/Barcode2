@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Item.AddItem"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Item" Height="300" Width="300" WindowStartupLocation="CenterScreen" VerticalAlignment="Top">
+        Title="Add Item" Height="300" Width="300" WindowStartupLocation="CenterScreen" VerticalAlignment="Top" Icon="D:\Task 4\Item2\img\additem.ico">
     <Grid VerticalAlignment="Top">
         <Label Content="Batch No:" Height="29" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label1" VerticalAlignment="Top" Width="103" />
         <TextBox TabIndex ="0" Height="23" HorizontalAlignment="Left" Margin="14,33,0,0" Name="txtBox_BatchNo" VerticalAlignment="Top" Width="245" TextChanged="txtBox_BatchNo_TextChanged" />

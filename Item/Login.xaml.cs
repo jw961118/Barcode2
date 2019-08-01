@@ -46,8 +46,8 @@ namespace Item
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            if (txtBox_Email.Text.Length != 0)
-            //if (txtBox_Email.Text.Length == 0)
+            //if (txtBox_Email.Text.Length != 0)
+            if (txtBox_Email.Text.Length == 0)
             {
                 errormessage.Text = "Enter an email.";
                 txtBox_Email.Focus();
@@ -55,11 +55,11 @@ namespace Item
             
             else
             {
-                //string email = txtBox_Email.Text;
-                //string password = passwordBox.Password;
+                string email = txtBox_Email.Text;
+                string password = passwordBox.Password;
 
-                string email = "jw@hotmail.com";
-                string password = "8888";
+                //string email = "jw@hotmail.com";
+                //string password = "8888";
 
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-Q1K44I8\\SA;Initial Catalog=Item2;User ID=sa;Password=softmap");
                 con.Open();
@@ -76,7 +76,7 @@ namespace Item
                 
                 if (retunvalue == 1)
                 {
-                    TrackName.name = txtBox_Email.Text;
+                    TrackName.name = email;
 
                     var MainWindow = new MainWindow();
                     MainWindow.Show();
