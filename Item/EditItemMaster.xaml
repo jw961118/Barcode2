@@ -14,7 +14,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="65,98,0,0" x:Name="txtBox_EditDesc" TabIndex="1" VerticalAlignment="Top" Width="197" IsReadOnly="True" />
         <Label Content="Desc:" Height="24" HorizontalAlignment="Left" Margin="26,95,0,0" x:Name="label1" VerticalAlignment="Top" Width="46" />
         <Label Content="Type:" HorizontalAlignment="Left" Margin="26,145,0,0" x:Name="label2" Width="37" Height="26" VerticalAlignment="Top" />
-        <Label Content="Item Master" FontWeight="Bold" Height="34" HorizontalAlignment="Left" x:Name="label3" VerticalAlignment="Top" Width="105" FontSize="16" Margin="10,12,0,0" />
+        <Label Content="Item Master" FontWeight="Bold" Height="34" HorizontalAlignment="Left" x:Name="label3" VerticalAlignment="Top" Width="105" FontSize="16" Margin="3,3,0,0" />
         <Label Content="Packing:" Height="29" HorizontalAlignment="Left" Margin="10,175,0,0" x:Name="label4" VerticalAlignment="Top" Width="53" />
         <Label Content="Volume:" Height="25" HorizontalAlignment="Left" Margin="10,204,0,0" x:Name="label5" VerticalAlignment="Top" Width="59" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="65,178,0,0" x:Name="txtBox_EditPacking" TabIndex="6" VerticalAlignment="Top" Width="197" IsReadOnly="True" />
@@ -37,6 +37,11 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="65,236,0,0" x:Name="txtBox_EditLocation" TabIndex="8" VerticalAlignment="Top" Width="197" IsReadOnly="True" />
         <Button Content="+ Add New Item" Height="26" HorizontalAlignment="Left" Margin="154,20,0,0" x:Name="btn_AddNewItem" TabIndex="9" VerticalAlignment="Top" Width="108" Click="btn_AddNewItem_Click" />
         <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="106,265,0,0" x:Name="btn_EditItem" TabIndex="9" VerticalAlignment="Top" Width="75" Click="btn_EditItem_Click" IsEnabled="False" />
-        <Button Content="- Delete Item" Height="26" HorizontalAlignment="Left" Margin="268,20,0,0" x:Name="btn_DeleteItem" TabIndex="9" VerticalAlignment="Top" Width="80" Click="btn_DeleteItem_Click" />
+        <Button Height="26" HorizontalAlignment="Left" Margin="268,20,0,0" x:Name="btn_DeleteItem" TabIndex="9" VerticalAlignment="Top" Width="25" Click="btn_DeleteItem_Click" >
+            <StackPanel>
+                <Image Source="D:\Task 4\Item2\img\delete.png" Height="18" Width="18" />
+            </StackPanel>
+        </Button>
+        <TextBlock Height="21" HorizontalAlignment="Left" Margin="16,33,0,0" Name="noti" Text="" VerticalAlignment="Top" Width="109" />
     </Grid>
 </Window>

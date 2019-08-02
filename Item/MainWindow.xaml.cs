@@ -59,5 +59,11 @@ namespace Item
             var ReprintBarcode = new ReprintBarcode();
             ReprintBarcode.Show();
         }
+
+        private void btn_EditAudit_Click(object sender, RoutedEventArgs e)
+        {
+            var Audit = new Audit();
+            Audit.Show();
+        }
     }
 }

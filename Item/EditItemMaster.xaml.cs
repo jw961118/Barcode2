@@ -191,6 +191,7 @@ namespace Item
                             {
                                 conn.Open();
                                 Itemcmd.ExecuteNonQuery();
+                                noti.Text = "";
                                 System.Windows.Forms.MessageBox.Show("Done");
                             }
                             catch
@@ -233,19 +234,6 @@ namespace Item
                                 conn.Close();
                             }  
                         }
-
-                        //txtBox_EditCode.Clear();
-                        //txtBox_EditDesc.Clear();
-                        //txtBox_EditPacking.Clear();
-                        //txtBox_EditVolume.Clear();
-                        //txtBox_EditLocation.Clear();
-                        //comboBox_EditType.SelectedIndex = -1;
-
-                        /*if (radioBtn_EditActive.IsChecked == true || radioBtn_EditInactive.IsChecked == true)
-                        {
-                            radioBtn_EditActive.IsChecked = false;
-                            radioBtn_EditInactive.IsChecked = false;
-                        }*/
 
                         txtBox_EditDesc.IsReadOnly = true;
                         txtBox_EditLocation.IsReadOnly = true;
@@ -291,6 +279,7 @@ namespace Item
                     radioBtn_EditInactive.IsEnabled = true;
                     btn_EditItem.IsEnabled = false;
                     btn_EditSave.IsEnabled = true;
+                    noti.Text = "Edit Mode";
                 }
                 else
                 {
