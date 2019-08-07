@@ -5,28 +5,28 @@
     
     <Grid>
         
-        <Button Height="62" HorizontalAlignment="Left" Margin="27,154,0,95" Name="btn_AddItem" VerticalAlignment="Center" Width="103" Click="btn_AddItem_Click" >
+        <Button TabIndex="3" Height="62" HorizontalAlignment="Left" Margin="27,154,0,95" Name="btn_AddItem" VerticalAlignment="Center" Width="103" Click="btn_AddItem_Click" >
             <StackPanel>
                 <Image Source="D:\Task 4\Item2\img\additem.png" Height="30" Width="30" />
                 <Label Content="Add Item" VerticalAlignment="Center" />
             </StackPanel>
         </Button>
         
-        <Button Height="61" HorizontalAlignment="Left" Margin="143,155,0,95" Name="btn_ScanItem" VerticalAlignment="Center" Width="103" Click="btn_ScanItem_Click" >
+        <Button TabIndex="4" Height="61" HorizontalAlignment="Left" Margin="143,155,0,95" Name="btn_ScanItem" VerticalAlignment="Center" Width="103" Click="btn_ScanItem_Click" >
             <StackPanel>
                 <Image Source="D:\Task 4\Item2\img\scan.png" Height="30" Width="30" />
                 <Label Content="Scan Barcode" VerticalAlignment="Center" />
             </StackPanel>
         </Button>
         
-        <Button Height="64" HorizontalAlignment="Left" Margin="27,75,0,172" Name="btn_EditItemMaster" VerticalAlignment="Center" Width="103" Click="btn_EditItemMaster_Click" >
+        <Button TabIndex="1" Height="64" HorizontalAlignment="Left" Margin="27,75,0,172" Name="btn_EditItemMaster" VerticalAlignment="Center" Width="103" Click="btn_EditItemMaster_Click" >
             <StackPanel>
                 <Image Source="D:\Task 4\Item2\img\itemmaster.png" Height="30" Width="30" />
                 <Label Content="Item Master" VerticalAlignment="Center" />
             </StackPanel>
         </Button>
 
-        <Button Height="64" HorizontalAlignment="Left" Margin="143,75,0,172" Name="btn_EditAudit" VerticalAlignment="Center" Width="103" Click="btn_EditAudit_Click" >
+        <Button TabIndex="2" Height="64" HorizontalAlignment="Left" Margin="143,75,0,172" Name="btn_EditAudit" VerticalAlignment="Center" Width="103" Click="btn_EditAudit_Click" >
             <StackPanel>
                 <Image Source="D:\Task 4\Item2\img\audit.png" Height="30" Width="30" />
                 <Label Content="Audit" VerticalAlignment="Center" />
