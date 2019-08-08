@@ -341,8 +341,13 @@ namespace Item
                 if (e.Key == Key.Down)
                 {
                     lblSuggestion.Focus();
+                    //lblSuggestion_KeyDown(sender, e);
                 }
 
+                else if (e.Key == Key.Enter)
+                {
+                    btn_EditSearch_Click(sender, e);
+                }
             }
         }
 
@@ -377,5 +382,6 @@ namespace Item
                 lblSuggestion.KeyDown += lblSuggestion_KeyDown;
             }
         }
+
     }
 }

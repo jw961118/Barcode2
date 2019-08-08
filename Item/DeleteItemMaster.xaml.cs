@@ -158,7 +158,7 @@ namespace Item
                         {
                             cmd.Connection = conn;
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "UPDATE ItemMaster SET Item_Status=0 WHERE Item_Code = '" + txtBox_DeleteCode.Text + "'";
+                            cmd.CommandText = "DELETE FROM ItemMaster WHERE Item_Code = '" + txtBox_DeleteCode.Text + "'";
 
                             try
                             {

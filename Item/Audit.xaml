@@ -3,15 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Audit" Height="437" Width="677" Icon="D:\Task 4\Item2\img\audit.ico" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox Height="20" HorizontalAlignment="Left" Margin="80,17,0,0" Name="txtBox_AuditCode" VerticalAlignment="Top" Width="201" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="80,17,0,0" Name="txtBox_AuditCode" VerticalAlignment="Top" Width="201" KeyDown="txtBox_AuditCode_KeyDown" />
         <Label Content="Item Code:" Height="29" HorizontalAlignment="Left" Margin="12,13,0,0" Name="label1" VerticalAlignment="Top" Width="75" />
-        <DataGrid AutoGenerateColumns="True" Height="291" HorizontalAlignment="Left" Margin="12,67,0,0" Name="dgv_Audit" VerticalAlignment="Top" Width="631" IsReadOnly="True" TabIndex="1" >
+        <DataGrid AutoGenerateColumns="True" Height="179" HorizontalAlignment="Left" Margin="12,68,0,0" Name="dgv_Audit" VerticalAlignment="Top" Width="631" IsReadOnly="True" TabIndex="1" SelectionChanged="dgv_Audit_SelectionChanged">
         </DataGrid>
         <Button Content="Show" Height="20" HorizontalAlignment="Left" Margin="287,17,0,0" Name="btn_Show" VerticalAlignment="Top" Width="53" Click="btn_Show_Click" />
         <RadioButton Content="Update" Height="16" HorizontalAlignment="Left" Margin="70,45,0,0" Name="rBtn_Update" VerticalAlignment="Top" Width="62" />
         <RadioButton Content="Insert" Height="16" HorizontalAlignment="Left" Margin="138,45,0,0" Name="rBtn_Insert" VerticalAlignment="Top" Width="62" />
         <RadioButton Content="Delete" Height="16" HorizontalAlignment="Left" Margin="200,45,0,0" Name="rBtn_Delete" VerticalAlignment="Top" Width="62" />
         <RadioButton Content="All" Height="16" HorizontalAlignment="Left" Margin="268,45,0,0" Name="rBtn_All" VerticalAlignment="Top" Width="62" />
-        <Button Content="View History" Height="20" HorizontalAlignment="Left" Margin="564,366,0,0" Name="btn_ViewHistory" VerticalAlignment="Top" Width="79" Click="btn_ViewHistory_Click" />
+        <Button Content="Grid view" Height="20" HorizontalAlignment="Left" Margin="564,366,0,0" Name="btn_ViewHistory" VerticalAlignment="Top" Width="79" Click="btn_ViewHistory_Click" IsEnabled="False" />
+        <Button Content="Form View" Height="20" HorizontalAlignment="Left" IsEnabled="False" Margin="479,366,0,0" Name="btn_ViewDetails" VerticalAlignment="Top" Width="79" Click="btn_ViewDetails_Click" />
+        <DataGrid AutoGenerateColumns="True" Height="88" HorizontalAlignment="Left" IsReadOnly="True" Margin="12,263,0,0" Name="dgv_Result" TabIndex="1" VerticalAlignment="Top" Width="631" />
     </Grid>
 </Window>
